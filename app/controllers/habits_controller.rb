@@ -1,4 +1,6 @@
 class HabitsController < ApplicationController
+  http_basic_authenticate_with name: "christina", password: "comet", except: [:index, :show]
+
   def index
     @habits = Habit.all
   end
