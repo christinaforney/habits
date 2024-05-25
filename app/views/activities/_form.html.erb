@@ -1,0 +1,13 @@
+<%= form_with model: [ @habit, @habit.activities.build ] do |form| %>
+  <p>
+    <%= form.label :repetitions %><br>
+    <%= form.number_field :repetitions %>
+  </p>
+  <p>
+    <%= form.label :note %><br>
+    <%= form.text_area :note %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
