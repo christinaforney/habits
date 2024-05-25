@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_25_224214) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_25_225737) do
   create_table "activities", force: :cascade do |t|
     t.integer "repetitions"
     t.text "note"
@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_25_224214) do
     t.integer "days"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
   end
 
   add_foreign_key "activities", "habits"

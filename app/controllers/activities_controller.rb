@@ -7,6 +7,6 @@ class ActivitiesController < ApplicationController
 
 	private
 		def activity_params
-			params.require(:activity).permit(:repetitions, :note)
+			params.require(:activity).permit(:repetitions, :note, :status)
 		end
 end

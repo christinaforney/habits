@@ -1,10 +1,14 @@
 <h1>Habits</h1>
 
+You have <%= Habit.active_count %> active habits!
+
 <ul>
   <% @habits.each do |habit| %>
-    <li>
-    	<%= link_to habit.title, habit %>
-    </li>
+  	<% unless habit.archived? %>
+	    <li>
+	    	<%= link_to habit.title, habit %>
+	    </li>
+	<% end %>
   <% end %>
 </ul>
 
