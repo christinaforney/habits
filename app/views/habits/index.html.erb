@@ -1,0 +1,11 @@
+<h1>Habits</h1>
+
+<ul>
+  <% @habits.each do |habit| %>
+    <li>
+    	<%= link_to habit.title, habit %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Habit", new_habit_path %>

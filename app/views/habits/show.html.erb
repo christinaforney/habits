@@ -1,0 +1,11 @@
+<h1><%= @habit.title %></h1>
+
+<p>Goal days per week: <%= @habit.days %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_habit_path(@habit) %></li>
+  <li><%= link_to "Destroy", habit_path(@habit), data: {
+				  	turbo_method: :delete,
+				  	turbo_confirm: "Are you sure?"
+				  } %></li>
+</ul>
