@@ -1,18 +1,16 @@
-<% unless activity.archived? %>
-  <p>
-    <strong>Repetitions:</strong>
-    <%= activity.repetitions %>
-  </p>
+<p>
+  <strong>Repetitions:</strong>
+  <%= activity.repetitions %>
+</p>
 
-  <p>
-    <strong>Note:</strong>
-    <%= activity.note %>
-  </p>
+<p>
+  <strong>Note:</strong>
+  <%= activity.note %>
+</p>
 
-  <p>
-    <%= link_to "Destroy Activity", [activity.habit, activity], data: {
-      turbo_method: :delete,
-      turbo_confirm: "Are you sure?"
-    } %>
-  </p>
-<% end %>
+<p>
+  <%= link_to "Destroy Activity", [activity.habit, activity], data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  } %>
+</p>
